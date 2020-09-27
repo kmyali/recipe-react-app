@@ -11,7 +11,7 @@ const App = () => {
   const [query, setQuery] = useState('chicken');
 
   useEffect( () => {
-    getRecipes();
+    //getRecipes();
   }, [query])
 
   const getRecipes = async () => {
@@ -37,6 +37,8 @@ const App = () => {
           Search
         </button>
       </form>
+      <h1 className="catch-phrase">What are you craving?</h1>
+      <p className="info">You can make up to five searches per minute on any dish or ingredient.</p>
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe 
@@ -47,6 +49,7 @@ const App = () => {
           ingredients = {recipe.recipe.ingredients}/>
         ) )}
       </div>
+      <p className="creds">Search bar powered by Edamam API</p>
     </div>
   )
 

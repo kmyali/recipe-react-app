@@ -28,3 +28,18 @@ color: white;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.catch-phrase{
+  font-family: Verdana;
+  font-size: 70px;
+}
+
+.info{
+  font-family: Verdana;
+  font-size: 15px;
+}
+
+.creds{
+  font-family: Verdana;
+  font-size: 10px;
+}
