@@ -8,10 +8,10 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState('chicken');
+  const [query, setQuery] = useState('');
 
   useEffect( () => {
-    //getRecipes();
+    getRecipes();
   }, [query])
 
   const getRecipes = async () => {
@@ -31,6 +31,9 @@ const App = () => {
   }
   return (
     <div className = "App">
+      <head>
+        <title className="page-title">Search recipes and more!</title>
+      </head>
       <form onSubmit= {getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit">
@@ -44,12 +47,15 @@ const App = () => {
           <Recipe 
           key={recipe.recipe.label} 
           title = {recipe.recipe.label} 
-          calories = {recipe.recipe.calories}
+          calories = {Math.round(recipe.recipe.calories)}
           image = {recipe.recipe.image}
-          ingredients = {recipe.recipe.ingredients}/>
+          ingredients = {recipe.recipe.ingredients}
+          url={recipe.recipe.url}
+          />
         ) )}
       </div>
       <p className="creds">Search bar powered by Edamam API</p>
+      <p className="creds">Kamal Ali ©2020</p>
     </div>
   )
 
