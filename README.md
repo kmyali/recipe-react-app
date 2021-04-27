@@ -1,3 +1,6 @@
+This is a personal React project that allows users to search for recipes using the Edamam API.
+Website: http://kamalmali.me/recipe-react-app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
