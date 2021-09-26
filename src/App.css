@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-size: 100%;
 }
 
 .search-form{
